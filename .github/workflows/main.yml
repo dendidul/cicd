@@ -18,7 +18,7 @@ jobs:
           dotnet restore
           dotnet publish -c Release -o ./publish
 
-      - name: Create deployment package 
+      - name: Create deployment package
         run: zip -r deployment-package.zip ./publish/*
 
       - name: Configure AWS credentials
