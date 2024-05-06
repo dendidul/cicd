@@ -34,4 +34,4 @@ jobs:
 
       - name: Deploy to AWS Lambda
         run: |
-          aws lambda update-function-code --function-name testcicd --role arn:aws:iam::767397959578:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO --s3-bucket albapro --s3-key deployment-package.zip --region ap-southeast-1
+          aws lambda update-function-code --function-name testcicd ---code ImageUri=project-management:latest --runtime dotnet6 --role arn:aws:iam::767397959578:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO --s3-bucket albapro --s3-key deployment-package.zip --region ap-southeast-1
